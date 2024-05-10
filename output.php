@@ -3,7 +3,7 @@
 // panggil file kontak.php
 require 'kontak.php';
 
-// ambil data kontak dari JSON, lalu simpan ke dalam variable $getKontak
+// ambil data kontak dari JSON dengan memanggil fungsi getJSON(), lalu simpan ke dalam variable $getKontak
 $getKontak = getJSON();
 
 // inisialisasi nilai $index untuk penomoran table
