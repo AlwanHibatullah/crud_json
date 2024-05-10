@@ -1,9 +1,12 @@
 <?php
 
+// panggil file kontak.php
 require 'kontak.php';
 
+// ambil data kontak dari JSON, lalu simpan ke dalam variable $getKontak
 $getKontak = getJSON();
 
+// inisialisasi nilai $index untuk penomoran table
 $index = 0;
 
 ?>
@@ -21,33 +24,37 @@ $index = 0;
 </head>
 
 <body>
-    <ul>
-        <li>
-            <a href="index.php">Input Data</a>
-        </li>
-        <li>
-            <a href="">Data Kontak</a>
-        </li>
-    </ul>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="index.php">Input Data</a>
+            </li>
+            <li>
+                <a href="">Data Kontak</a>
+            </li>
+        </ul>
+    </div>
 
-    <h1>Data Kontak</h1>
+    <div class="container-table">
+        <h2>Data Kontak</h2>
 
-    <table border="1">
-        <tr>
-            <th>No</th>
-            <th>Nama</th>
-            <th>Email</th>
-        </tr>
-
-        <?php foreach ($getKontak as $kontak) : ?>
+        <table class="kontak">
             <tr>
-                <td><?= $index + 1 ?></td>
-                <td><?= $kontak['nama'] ?></td>
-                <td><?= $kontak['email'] ?></td>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Email</th>
             </tr>
-        <?php $index++;
-        endforeach; ?>
-    </table>
+
+            <?php foreach ($getKontak as $kontak) : ?>
+                <tr>
+                    <td><?= $index + 1 ?></td>
+                    <td><?= $kontak['nama'] ?></td>
+                    <td><?= $kontak['email'] ?></td>
+                </tr>
+            <?php $index++;
+            endforeach; ?>
+        </table>
+    </div>
 </body>
 
 </html>

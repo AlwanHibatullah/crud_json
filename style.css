@@ -1,0 +1,123 @@
+* {
+  /* CSS Reset */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: sans-serif;
+  background-color: aliceblue;
+}
+
+/* Membuat Navbar */
+
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  width: 80%;
+}
+
+.navbar ul li > a {
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.navbar ul li > a:hover {
+  background-color: #000;
+}
+
+/* end Membuat Navbar */
+
+/* Menghias form input */
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container .form-group {
+  width: 100%;
+  margin: 0 auto 16px auto;
+}
+
+.container label {
+  padding-right: 30px;
+}
+
+.container input[type="text"],
+.container input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #777;
+}
+
+.container input[type="submit"] {
+  padding: 5px 10px;
+  border: none;
+  background-color: #04aa6d;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menghias table */
+
+.container-table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.container-table h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-table .kontak {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.container-table .kontak th,
+.container-table .kontak td {
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.container-table .kontak tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.container-table .kontak th {
+  padding: 6px 0px;
+  background-color: #04aa6d;
+  color: white;
+}
